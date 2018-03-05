@@ -2,7 +2,7 @@
 
 ## _iOS Apps in Swift4_
 
-###### funAndGames: Tic-Tac-Toe App
+1. **Fun And Games: Tic-Tac-Toe App**
 
 - Date: 2/11/2018
 - What: iOS Tic-Tac-Toe app built to display on iPhone 8
