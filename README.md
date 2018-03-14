@@ -21,5 +21,12 @@
 1. **MySQL - Chicago Musicians Connect Database**
 
 - Date: 3/14/2018
-- What: Relational database written in MySQL
-- Description:
+- What: A simple but complete web application powered by a relational database written in MySQL.
+- Description: Designed and developed a relational database to faciliate connections between musicians, bookers, and venues in Chicago, IL based on a variety of factors/attributes.
+- Tools used:
+    - Created an Entity Relationship Diagram (ERD) for relational modeling.
+    - Examined the relational model and functional dependencies and their application to the methods for improving database design: normal forms and normalization.
+    - Utilized subqueries (correlated and uncorrelated), aggregation, various types of joins including outer joins and syntax alternatives, functions and stored procedures.
+    - Created a basic web site powered by the database using the php and a web server.
+- Working website : https://mpcs53001.cs.uchicago.edu/~scannillo/
+- See git directory for MySQL scripts used to create the database
