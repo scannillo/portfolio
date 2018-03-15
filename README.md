@@ -4,7 +4,7 @@
 
 1. **ChiMusiciansConnect: D.I.Chi App** 
 <p align="center">
-<img src="/images/orange_logo.png?raw=true" height="60px" width="60px" >
+<img src="/images/orange_logo.png?raw=true" height="75px" width="75px" >
 </p>
 
 - Date: 3/14/2018
@@ -12,7 +12,7 @@
 - Description: The first part of a potential long-term personal project. The goal of the project is to connect musicians, show bookers, and artists alike in the Chicago DIY Music scene. This phase of the app focused on the creation of and presentation of musician profiles (including a user profile image, sound description, bio, and in-app song via Soundcloud) in an iPhone compatible app.
 - Tools used: Firebase, Firebase/Storage, CocoaPods, Alamofire, Custom Splashscreen, custom design/graphics, Auto-layout, UINavigationControllers, UITableViewControllers, UITabBarControllers, Network activity indication, Network connection indication, Network post/fetch procedures
 
-- <img src="/images/simulator_front.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_table.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_profile.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_edit.png?raw=true" height="245px" width="138px" >
+- <img src="/images/simulator_front.png?raw=true" height="245px" width="138px" >    <img src="/images/simulator_table.png?raw=true" height="245px" width="138px" >    <img src="/images/simulator_profile.png?raw=true" height="245px" width="138px" >    <img src="/images/simulator_edit.png?raw=true" height="245px" width="138px" >
 
 
 
