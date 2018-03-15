@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CHI Musicians Connect</title>
+</head>
+
+<body>
+<h1>Chicago Local Musicians Connect</h1>
+
+<!-- Rate a booker. This will log in a table of booker ratings -->
+<hr>
+Leave a booker rating:
+<p>
+
+<form method=get action="E_rate_booker.php">
+Here is a list of  <a href="11_list_bookers.php">all bookers.</a><BR><p>
+<b>Enter booker name:</b><br>
+<input type="text" name="bookerNameInput" required><BR>
+<b>Enter rating from 0 to 10:</b><br>
+<input type="number" name="ratingInput" min="0" max ="10" required><BR>
+
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+</body>
+</html>

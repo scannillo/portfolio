@@ -1,0 +1,32 @@
+
+## SCHEMA RELATIONS: 
+
+Musician(MusicianName, MusicianEmail, MusicURL, MusicianRating, MusicianPhone)
+Venue(VenueName, Capacity, VenuePhone, Address, NeighborhoodName)
+Neighborhood(NeighborhoodName, CardinalDirection) 
+Booker(BookerName, BookerEmail, BookerPhone, BookerRating, CoverCharge, RequiredTixSales) 
+Genre(GenreCode, GenreName) 
+Backline(BacklineId, NumBassAmps, DrumKit, NumGuitarAmps, NumMonitors, NumChannelMixer, NumPianos, PA)
+Reach(MusicianName, CardinalDirection) 
+Offers(VenueName, GenreCode, VenueRating) 
+Books(VenueName, BookerName) 
+Provides (BacklineId, VenueName) 
+Plays(MusicianName, GenreCode)
+
+
+
+## DATABASE SUMMARY
+
+GOAL:
+This database will be a valuable tool for those involved in Chicago's DIY (do-it-yourself) independent music scene. This database is targeted for use by both DIY musicians and by talent bookers in Chicago.
+
+THE PROBLEM:
+The idea for this database came about through my years of experience working as a DIY musician in both New York City and Chicago. Though there are countless musical groups and countless venues to offer performances in both of these large cities, finding a best-fit-match between artist and venue is more often than not unlikely. Musicians are forced to embrace the trial and error mindset in order to find the right booker and venue for their style, their fanbase, and their level of popularity. This database will allow musicians to cut down on the time of trial and error in performing at unfit venues by allow them to connect with bookers based on various attributes, such as their genre, their equipment needs, their payment policy, to name a few. The database will also allow bookers to easily search for artists based on these attributes as well.
+
+DATABASE SPECIFICS: 
+The database will store venue information including venue name, its maximum capacity, the venue's address, and the venue's phone number. Each venue will be located in exactly one neighborhood, but multiple venues can be in the same neighborhood. Artists can search venues based on neighborhood's cardinality (N,S,E,W, etc) to decide their desired travel distance. Each venue will be connected to one or more bookers. A booker is someone who coordinates shows with venues and artists and takes care of logistics. The booker's email, phone, name, and rating will be stored. Both bookers and artists will have ratings attached to their dataset because musicians and bookers are notorious for not following through on shows or being unprofessional. The rating attempts to eliminate wasted time for all involved. The database will store information on each musician such as their name, their website, their email and their cell phone. 
+
+Another important factor here is payment policy. Payment policies will be attached to bookers as they are a large part of what makes a musician decide to book with that booker or not. These attributes include whether or not a minimum number of tickets must be sold, if there is a cover charge, and what percent of the sales go directly to the bands. Oftentimes, confusion on payment policy leads to disagreement between artist and booker and this aims to relieve some discrepancy. 
+
+An artist can be linked to one or more genre's of music. Each genre of music will be attached to its target age demographic. Each venue will be able to offer music in one or many genre's. With this offering, a venue has a rating based on how well they host that specific genre of music. In addition, each venue will have an associated backline, which is the equipment available on stage. This is useful because some bands need a 'full' backline, such as drums, bass, guitar, mics, while other bands might need a 'half' backline for just a guitar and bass. This will help musicians narrow down venues, in addition to all of the other information in this database
+
