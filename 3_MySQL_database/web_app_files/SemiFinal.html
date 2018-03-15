@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CMCSearch</title>
+</head>
+
+<body>
+<h1>Search the CMC Database</h1>
+
+<!-- 1. list appropriate musician info -->
+<hr>
+<b>Section 1. Get musician information.</b>
+<p>
+<form method=get action="2_musician_info.php">
+Enter musician name:
+<input type="text" name="musicianIn" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<!-- 2. list appropriate booker info -->
+<hr>
+<b>Section 2. Get booker information.</b>
+<p>
+<form method=get action="2_booker_info.php">
+Enter booker name:
+<input type="text" name="bookerIn" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<!-- 3. list appropriate venue info -->
+<hr>
+<b>Section 3. Get venue information.</b>
+<p>
+<form method=get action="3_venue_info.php">
+Enter venue name:
+<input type="text" name="venueIn" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<!-- 4. list all musicians -->
+<hr>
+<b>Section 4. See all musicians in the app.</b>
+<p>
+<a href="6_list_musicians.php">List of musicians.</a>
+
+<!-- 5. list all venues -->
+<hr>
+<b>Section 5. See all venues in the app.</b>
+<p>
+<a href="12_list_venues.php">List of venues.</a>
+
+<!-- 6. list all bookers -->
+<hr>
+<b>Section 6. See all bookers in the app.</b>
+<p>
+<a href="11_list_bookers.php">List of bookers.</a>
+
+
+<!-- 7. list musicians per inputed genre name -->
+<hr>
+<b>Section 7. Find musicians by genre.</b>
+<p>
+<form method=get action="10_musicians_per_genre.php">
+Genre:
+<select name="inputGenre">
+  <option value="ALT">Alternative</option>
+  <option value="DNC">Dance</option>
+  <option value="SNGSW">Singer-Songwriter</option>
+  <option value="EDM">EDM</option>
+  <option value="ROCK">Rock</option>
+  <option value="POP">Pop</option>
+  <option value="Punk">Punk</option>
+  <option value="ELEC">Electronic</option>
+  <option value="HIPHP">Hip-Hop</option>
+  <option value="RAP">Rap</option>
+  <option value="INDPP">Indie Pop</option>
+  <option value="INDIE">Indie</option>
+  <option value="FOLK">Folk</option>
+  <option value="FUNK">Funk</option>
+  <option value="R&B">RnB</option>
+  <option value="BLUES">Blues</option>
+  <option value="JAZZ">Jazz</option>
+  <option value="CNTRY">Country</option>
+  <option value="SOUL">Soul</option>
+  <option value="RGGE">Reggae</option>
+  <option value="NWAGE">New Age</option>
+  <option value="GRNGE">Grunge</option>
+  <option value="HVMTL">Heavy Metal</option>
+  <option value="HOUSE">House</option>
+  <option value="PSTPK">Post-punk</option>
+  <option value="SKA">Ska</option>
+  <option value="PSYCH">Psychedellic</option>
+  <option value="ACOU">Acoustic</option>
+  <option value="ANIME">Anime</option>
+  <option value="CLASS">Classical</option>
+  <option value="RELIG">Christian or Gospel</option>
+  <option value="INST">Instrumental</option>
+  <option value="WORLD">World</option>
+  <option value="SPKWD">Spoken Word</option>
+  <option value="VIDGM">Video Game</option>
+  <option value="AMBT">Ambient</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+
+
+<!-- 8. find musicians given a genre name and a cardinal direction of CHI-->
+<hr>
+<b>Section 8. Find available musicians given genre and location.</b>
+<p>
+
+<form method=get action="5_musician_loc_genre.php">
+
+Genre:
+<select name="genreInput">
+  <option value="ALT">Alternative</option>
+  <option value="DNC">Dance</option>
+  <option value="SNGSW">Singer-Songwriter</option>
+  <option value="EDM">EDM</option>
+  <option value="ROCK">Rock</option>
+  <option value="POP">Pop</option>
+  <option value="Punk">Punk</option>
+  <option value="ELEC">Electronic</option>
+  <option value="HIPHP">Hip-Hop</option>
+  <option value="RAP">Rap</option>
+  <option value="INDPP">Indie Pop</option>
+  <option value="INDIE">Indie</option>
+  <option value="FOLK">Folk</option>
+  <option value="FUNK">Funk</option>
+  <option value="R&B">RnB</option>
+  <option value="BLUES">Blues</option>
+  <option value="JAZZ">Jazz</option>
+  <option value="CNTRY">Country</option>
+  <option value="SOUL">Soul</option>
+  <option value="RGGE">Reggae</option>
+  <option value="NWAGE">New Age</option>
+  <option value="GRNGE">Grunge</option>
+  <option value="HVMTL">Heavy Metal</option>
+  <option value="HOUSE">House</option>
+  <option value="PSTPK">Post-punk</option>
+  <option value="SKA">Ska</option>
+  <option value="PSYCH">Psychedellic</option>
+  <option value="ACOU">Acoustic</option>
+  <option value="ANIME">Anime</option>
+  <option value="CLASS">Classical</option>
+  <option value="RELIG">Christian or Gospel</option>
+  <option value="INST">Instrumental</option>
+  <option value="WORLD">World</option>
+  <option value="SPKWD">Spoken Word</option>
+  <option value="VIDGM">Video Game</option>
+  <option value="AMBT">Ambient</option>
+</select>
+<BR> Location:
+<select name="cardinalInput">
+  <option value="North Side">North Side</option>
+  <option value="West Side">West Side</option>
+  <option value="Far North Side">Far North Side</option>
+  <option value="Northwest Side">Northwest Side</option>
+  <option value="Downtown">Downtown</option>
+  <option value="Southwest Side">Southwest Side</option>
+  <option value="South Side">South Side</option>
+  <option value="Far South Side">Far South Side</option>
+  <option value="Far Southwest Side">Far Southwest Side</option>
+</select>
+
+<input type="submit" value="Submit">
+</form>
+
+
+<p>
+<a href="8_num_per_genre.php">Complete list of</a> musicians for each genre.
+<p>
+
+<!-- 9. get all bookers above the entered rating -->
+<hr>
+<b>Section 9. Find bookers based on rating.</b>
+<p>
+<form method=get action="9_booker_by_rating.php">
+Enter minimum rating:
+<input type="number" name="inputRating" min="0" max="10"><BR>
+<input type="submit" value="Submit">
+</form>
+
+<!-- 9. find bookers in a specific neighborhood -->
+<hr>
+<b>Section 10. Find bookers based on Chicago cardinal direction.</b>
+<p>
+<form action="4_find_bookers.php">
+<select name="neighborhood">
+  <option value="North Side">North Side</option>
+  <option value="West Side">West Side</option>
+</select>
+<input type="submit">
+</form>
+
+
+<hr>
+
+<!-- 11. list all tables -->
+<b>Section 11. View all tables in this database.</b>
+<p>
+<a href="1_list_tables.php">List of tables.</a>
+
+
+</body>
+</html>
