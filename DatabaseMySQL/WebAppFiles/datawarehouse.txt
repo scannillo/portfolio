@@ -1,0 +1,29 @@
+Data warehousing is a system that combines data from one or more sources in order to be analyzed for greater business intelligence and analysis. In terms of this project, there are two interesting subjects that would be well-suited to analyze using data warehousing.
+
+1) Venue rating by genre:
+
+This app has the feature of rating a venue in it's ability to host specific genres of music. Users of the app can interact with the database by providing a rating from 0 to 10 per venue, per genre. For example, a user can rate 'The Elbo Room' with a rating of 6.0 for 'Punk' music and 8.0 for 'Acoustic' music. The purpose of this is to give users an idea of which places are best suited for each type of music.
+
+This is something that could be analyzed using datawarehousing. Upon each rating entered by a user, a log table is kept of each venue rating per genre. Databases are optimized to maintain accurate data in the moment and are ofte updated in real time. Datawarehouses are designed to give views of longer-range data over time. This makes datawarehousing a perfect place to analyze/track the changes over time in how a venue is able to entertain specific genres of music. The tables involved in this analysis would be ... 
+a. Venue table (keeps venue profile information up to date)
+b. LogVenueRatings table (stores all ratings per venue per genre)
+c. Offers table (stores current average rating per venue per genre)
+d. Genre table (stores genre name/ code information).
+
+The trends in ratings over time per genre offered is interesting to analyze, as music venues do typically cater to a specific style. However, it is sometimes the case were over time, a venue's demographic shifts and starts becoming better suited to a new genre, versus its old one. This is what we could analyze and look at over time for each venue.
+
+2) Musician ratings
+
+Another feature of this app is the ability to rate musician profiles directly. These ratings are stored in a LogMusicianRatings table. Musicians can be rated by any users of the app and are rated from 0 to 10. The LogMusiciansRatings table stores the musician name, the date of the rating, and the user who rated.
+
+An interesting thing to analyze via datawarehousing over time would be trends in musician profile ratings. For example, let's say the musician Sammy Cannillo started off her career in 2017 with a 9.0 average rating for months, and then has most recently been averageing at 5.5 ratings consistently the past year. This is something that could be logged and analyzed. The tables needed to be involved in this analysis would be ...
+a. Musician table (stores musician profile information)
+b. LogMusicianRatings table (stores a log of ratings on their profile)
+c. Plays table (stores information on which genre each musician plays)
+d. Reach table (stores information on locations each musician is willing to play)
+
+These four tables would be interesting to analyze together with musician rating over time. Plays and Reach are including to look at potential changes in their performance genre that could contribute to their rating change and  their varying performance locations that could also contribute to their rating fluctuation. As a musician's sound and style often evolve over time, this is something interesting to track in a datawarehouse. Another interesting thing to consider, is the user attribute of the LogMusicianRatings table. A question such as "what type of user, and what attributs of that user, is most often rating this musician high/low" also has the potential to be answered via analysis in datawarehousing. 
+
+
+
+

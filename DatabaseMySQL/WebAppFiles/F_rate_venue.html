@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CHI Musicians Connect</title>
+</head>
+
+<body>
+<h1>Chicago Local Musicians Connect</h1>
+
+<!-- Rate a venue. This will log in a table of venue ratings -->
+<hr>
+This rating describes the fit of the genre to be performed at specific venues.
+<p>
+
+<form method=get action="F_rate_venue.php">
+Here is a list of  <a href="12_list_venues.php">all venues.</a><BR>
+<p>
+<b>Enter venue name:</b><br>
+<input type="text" name="venueNameInput" required><BR>
+<p>
+Select a genre:
+<select name="genreCodeInput">
+  <option value="ALT">Alternative</option>
+  <option value="DNC">Dance</option>
+  <option value="SNGSW">Singer-Songwriter</option>
+  <option value="EDM">EDM</option>
+  <option value="ROCK">Rock</option>
+  <option value="POP">Pop</option>
+  <option value="Punk">Punk</option>
+  <option value="ELEC">Electronic</option>
+  <option value="HIPHP">Hip-Hop</option>
+  <option value="RAP">Rap</option>
+  <option value="INDPP">Indie Pop</option>
+  <option value="INDIE">Indie</option>
+  <option value="FOLK">Folk</option>
+  <option value="FUNK">Funk</option>
+  <option value="R&B">RnB</option>
+  <option value="BLUES">Blues</option>
+  <option value="JAZZ">Jazz</option>
+  <option value="CNTRY">Country</option>
+  <option value="SOUL">Soul</option>
+  <option value="RGGE">Reggae</option>
+  <option value="NWAGE">New Age</option>
+  <option value="GRNGE">Grunge</option>
+  <option value="HVMTL">Heavy Metal</option>
+  <option value="HOUSE">House</option>
+  <option value="PSTPK">Post-punk</option>
+  <option value="SKA">Ska</option>
+  <option value="PSYCH">Psychedellic</option>
+  <option value="ACOU">Acoustic</option>
+  <option value="ANIME">Anime</option>
+  <option value="CLASS">Classical</option>
+  <option value="RELIG">Christian or Gospel</option>
+  <option value="INST">Instrumental</option>
+  <option value="WORLD">World</option>
+  <option value="SPKWD">Spoken Word</option>
+  <option value="VIDGM">Video Game</option>
+  <option value="AMBT">Ambient</option>
+</select>
+<BR>
+<p>
+<b>Enter a rating from 0 to 10:</b><br>
+<input type="number" name="ratingInput" min="0" max ="10" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+</body>
+</html>
