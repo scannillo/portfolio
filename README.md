@@ -29,4 +29,4 @@
     - Utilized subqueries (correlated and uncorrelated), aggregation, various types of joins including outer joins and syntax alternatives, functions and stored procedures.
     - Created a basic web site powered by the database using the php and a web server.
 - Working website : https://mpcs53001.cs.uchicago.edu/~scannillo/
-- See git directory for MySQL scripts used to create the database
+- See git directory for MySQL scripts used to create the database. See WebAppFiles for queries used in the website.
