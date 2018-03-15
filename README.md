@@ -21,7 +21,7 @@
 1. **MySQL - Chicago Musicians Connect Database**
 
 - Date: 3/14/2018
-- What: A simple but complete web application powered by a relational database written in MySQL.
+- What: A simple but complete web application powered by a relational database using MySQL and SQL.
 - Description: Designed and developed a relational database to faciliate connections between musicians, bookers, and venues in Chicago, IL based on a variety of factors/attributes.
 - Tools used:
     - Created an Entity Relationship Diagram (ERD) for relational modeling.
