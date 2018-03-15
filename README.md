@@ -8,7 +8,7 @@
 - What: iOS app to create and store musician profiles based in Chicago, IL
 - Description: The first part of a potential long-term personal project. The goal of the project is to connect musicians, show bookers, and artists alike in the Chicago DIY Music scene. This phase of the app focused on the creation of and presentation of musician profiles (including a user profile image, sound description, bio, and in-app song via Soundcloud) in an iPhone compatible app.
 - Tools used: Firebase, Firebase/Storage, CocoaPods, Alamofire, Custom Splashscreen, custom design/graphics, Auto-layout, UINavigationControllers, UITableViewControllers, UITabBarControllers, Network activity indication, Network connection indication, Network post/fetch procedures
-- ![Alt text](/images/orange_logo.png?raw=true "Optional Title")
+- ![](/images/orange_logo.png =250x250)
 
 
 2. **Fun And Games: Tic-Tac-Toe App**
