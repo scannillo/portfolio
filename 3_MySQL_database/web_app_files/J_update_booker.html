@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CHI Musicians Connect</title>
+</head>
+
+<body>
+<h1>Chicago Local Musicians Connect</h1>
+
+
+<p>
+<b>Update a booker profile:</b>
+<p>
+<hr>
+<b>Update booker name:</b>
+<p>
+<form method=get action="J1_update_booker_name.php">
+Enter new booker name:
+<input type="text" name="newNameInput" required><BR>
+Enter old booker name:
+<input type="text" name="oldNameInput" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<p>
+<hr>
+<b>Delete a booker from this app:</b>
+<p>
+<form method=get action="J2_delete_booker.php">
+Enter a booker name to delete:
+<input type="text" name="nameInput" required><BR>
+<input type="submit" value="Delete">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CHI Musicians Connect</title>
+</head>
+
+<body>
+<h1>Chicago Local Musicians Connect</h1>
+
+
+<p>
+<b>Update a musician profile:</b>
+<p>
+<hr>
+<b>Update musician name:</b>
+<p>
+<form method=get action="G1_update_musician_name.php">
+Enter new musician name:
+<input type="text" name="newNameInput" required><BR>
+Enter old musician name:
+<input type="text" name="oldNameInput" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<p>
+<hr>
+<b>Update musician email:</b>
+<p>
+<form method=get action="G2_update_musician_email.php">
+Enter musician name:
+<input type="text" name="newNameInput" required><BR>
+Enter new email:
+<input type="text" name="newEmailInput" required><BR>
+<input type="submit" value="Submit">
+</form>
+
+<p>
+<hr>
+<b>Delete a musician from this app:</b>
+<p>
+<form method=get action="G3_delete_musician.php">
+Enter a musician name to delete:
+<input type="text" name="nameInput" required><BR>
+<input type="submit" value="Delete">
+</form>
+
+</body>
+</html>
