@@ -24,9 +24,9 @@ FROM Venue, Backline, Provides
 WHERE Provides.VenueName = Venue.VenueName
 AND Backline.BacklineId = Provides.BacklineId
 AND Venue.VenueName IN (SELECT Venue.VenueName
-										FROM Venue, Neighborhood
-										WHERE Venue.NeighborhoodName = Neighborhood.NeighborhoodName
-										AND Neighborhood.CardinalDirection = 'North Side')
+						FROM Venue, Neighborhood
+						WHERE Venue.NeighborhoodName = Neighborhood.NeighborhoodName
+						AND Neighborhood.CardinalDirection = 'North Side')
 AND Backline.DrumKit = 1
 GROUP BY Venue.VenueName;
 
@@ -37,18 +37,18 @@ WHERE Backline.BacklineId = Provides.BacklineId
 AND Books.BookerName = Booker.BookerName
 AND Backline.NumChannelMixer >= 3
 AND Provides.VenueName IN (SELECT Venue.VenueName
-											FROM Venue, Neighborhood
-											WHERE Venue.NeighborhoodName = Neighborhood.NeighborhoodName
-											AND Neighborhood.CardinalDirection = 'West Side');
+							FROM Venue, Neighborhood
+							WHERE Venue.NeighborhoodName = Neighborhood.NeighborhoodName
+							AND Neighborhood.CardinalDirection = 'West Side');
 
 -- A booker wants to find a list of artists who are willing to play at The Elbo Room who will play Blues or Folk music.
 SELECT Plays.MusicianName
 FROM Reach
 JOIN Plays USING (MusicianName)
 WHERE Reach.CardinalDirection = (SELECT Neighborhood.CardinalDirection
-														FROM Venue, Neighborhood
-														WHERE Venue.VenueName = 'Venue#46'
-														AND Venue.NeighborhoodName = Neighborhood.NeighborhoodName)
+								FROM Venue, Neighborhood
+								WHERE Venue.VenueName = 'Venue#46'
+								AND Venue.NeighborhoodName = Neighborhood.NeighborhoodName)
 AND Plays.GenreCode = 'BLUES' OR Plays.GenreCode = 'FOLK';
 
 -- Return the score of the best rated musician for each genre. If the genre has no rated musician, still include it in the list! There can be more than one best rated.
@@ -64,10 +64,10 @@ GROUP BY G.GenreName, M.MusicianName;
 -- The below keeps a LOG/ track of changes made to the Musicians table when a MusicianRating is changed. First, lets create the relation.
 CREATE TABLE MusicianRatingChanges (
 	MusicianName			VARCHAR(75),
-    OldRating					FLOAT,
-    NewRating					FLOAT,
-    EditorName					VARCHAR(100),
-    EditDatetime				DATETIME,
+    OldRating				FLOAT,
+    NewRating				FLOAT,
+    EditorName				VARCHAR(100),
+    EditDatetime			DATETIME,
     PRIMARY KEY(MusicianName, EditDatetime)
 );
 

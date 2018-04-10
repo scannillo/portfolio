@@ -17,8 +17,8 @@ BEGIN
     VALUES(musicianNameInput, musicianRatingInput, CURRENT_USER(), NOW());
     
     SET newAvgRating = (SELECT AVG(LogRating)
-										FROM LogMusicianRatings L
-										WHERE L.MusicianName = musicianNameInput);
+						FROM LogMusicianRatings L
+						WHERE L.MusicianName = musicianNameInput);
                                         
 	UPDATE Musician
     SET MusicianRating = newAvgRating
@@ -31,7 +31,7 @@ DELIMITER ;
 DELIMITER |
 CREATE PROCEDURE updateBookerRating(
 	IN bookerNameInput				VARCHAR(75),
-    IN bookerRatingInput				FLOAT
+    IN bookerRatingInput			FLOAT
 )
 BEGIN
 
@@ -41,8 +41,8 @@ BEGIN
     VALUES(bookerNameInput, bookerRatingInput, CURRENT_USER(), NOW());
     
     SET newAvgRating = (SELECT AVG(LogRating)
-										FROM LogBookerRatings L
-										WHERE L.BookerName = bookerNameInput);
+						FROM LogBookerRatings L
+						WHERE L.BookerName = bookerNameInput);
                                         
 	UPDATE Booker
     SET BookerRating = newAvgRating
@@ -56,7 +56,7 @@ DELIMITER ;
 DELIMITER |
 CREATE PROCEDURE updateVenueRating(
 	IN venueNameInput				VARCHAR(75),
-    IN genreCodeInput	        		VARCHAR(5),
+    IN genreCodeInput	        	VARCHAR(5),
 	IN venueRatingInput				FLOAT
 )
 BEGIN
@@ -67,9 +67,9 @@ BEGIN
     VALUES(venueNameInput, genreCodeInput, venueRatingInput, CURRENT_USER(), NOW());
     
     SET newAvgRating = (SELECT AVG(LogRating)
-										FROM LogVenueRatings L
-										WHERE L.VenueName = venueNameInput
-                                        AND L.GenreCode = genreCodeInput);
+						FROM LogVenueRatings L
+						WHERE L.VenueName = venueNameInput
+                        AND L.GenreCode = genreCodeInput);
                                         
 	INSERT INTO Offers 
     VALUES (venueNameInput, genreCodeInput, venueRatingInput)
