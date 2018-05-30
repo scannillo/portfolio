@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WYu-m6-6k9">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="geg-wQ-GNx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="sv2-wO-Ous" customClass="SettingsViewController" customModule="Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PLz-ND-s4M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiq-U0-UaJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="59E-Ma-Hir">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="iJG-mq-gtc">
+                                            <connections>
+                                                <segue destination="WYu-m6-6k9" kind="show" animates="NO" id="iwJ-sQ-uCR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync All Photos From iCloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57t-16-ucQ">
+                                <rect key="frame" x="78" y="492" width="219" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDb-gR-ohc">
+                                <rect key="frame" x="137" y="356" width="100" height="100"/>
+                                <state key="normal" image="sync"/>
+                                <connections>
+                                    <action selector="syncPressed:" destination="sv2-wO-Ous" eventType="touchUpInside" id="ZeE-2o-HF4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMq-zX-RQo">
+                                <rect key="frame" x="23" y="223" width="329" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="57t-16-ucQ" firstAttribute="leading" secondItem="QNp-uX-0yX" secondAttribute="leading" constant="78" id="D7t-ZL-uX6"/>
+                            <constraint firstItem="tiq-U0-UaJ" firstAttribute="trailing" secondItem="QNp-uX-0yX" secondAttribute="trailing" id="E9t-Ov-whZ"/>
+                            <constraint firstItem="qDb-gR-ohc" firstAttribute="centerX" secondItem="PLz-ND-s4M" secondAttribute="centerX" id="Goz-Xq-VE1"/>
+                            <constraint firstItem="57t-16-ucQ" firstAttribute="top" secondItem="qDb-gR-ohc" secondAttribute="bottom" constant="36" id="Il6-30-gmB"/>
+                            <constraint firstItem="tiq-U0-UaJ" firstAttribute="top" secondItem="QNp-uX-0yX" secondAttribute="top" id="MOL-96-R9c"/>
+                            <constraint firstItem="QNp-uX-0yX" firstAttribute="trailing" secondItem="57t-16-ucQ" secondAttribute="trailing" constant="78" id="NqR-Gr-RVJ"/>
+                            <constraint firstItem="tiq-U0-UaJ" firstAttribute="leading" secondItem="QNp-uX-0yX" secondAttribute="leading" id="O5w-uz-9HL"/>
+                            <constraint firstItem="OMq-zX-RQo" firstAttribute="leading" secondItem="QNp-uX-0yX" secondAttribute="leading" constant="23" id="Sqr-Tz-H22"/>
+                            <constraint firstItem="tiq-U0-UaJ" firstAttribute="top" secondItem="QNp-uX-0yX" secondAttribute="top" id="TrG-ND-WBp"/>
+                            <constraint firstItem="qDb-gR-ohc" firstAttribute="centerY" secondItem="PLz-ND-s4M" secondAttribute="centerY" id="cOD-RC-csq"/>
+                            <constraint firstItem="qDb-gR-ohc" firstAttribute="top" secondItem="OMq-zX-RQo" secondAttribute="bottom" constant="100" id="cnA-bt-e7M"/>
+                            <constraint firstItem="QNp-uX-0yX" firstAttribute="trailing" secondItem="OMq-zX-RQo" secondAttribute="trailing" constant="23" id="fhO-DI-xIy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QNp-uX-0yX"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="iJG-mq-gtc" id="dfU-Fu-cmk"/>
+                        <outlet property="userNameLabel" destination="OMq-zX-RQo" id="rnl-eS-R39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAA-MS-jlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-993" y="-228"/>
+        </scene>
+        <!--My Photos-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IeT-lI-vzP">
+                                <rect key="frame" x="0.0" y="140" width="375" height="594"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoTableViewCell" rowHeight="120" id="PwY-XI-WrA" customClass="PhotoTableViewCell" customModule="Journal_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PwY-XI-WrA" id="lYK-8B-F2E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWw-Xf-MJu">
+                                                    <rect key="frame" x="138" y="52" width="222" height="57"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.63161670920000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-dX-ROy">
+                                                    <rect key="frame" x="138" y="23" width="222" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-F8-AAt">
+                                                    <rect key="frame" x="11" y="12" width="115" height="95.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="XQi-As-oCP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EIM-dX-ROy" firstAttribute="trailing" secondItem="lYK-8B-F2E" secondAttribute="trailingMargin" id="1i8-Cu-quW"/>
+                                                <constraint firstItem="EIM-dX-ROy" firstAttribute="leading" secondItem="uRp-F8-AAt" secondAttribute="trailing" constant="12" id="7qo-5w-adU"/>
+                                                <constraint firstItem="uRp-F8-AAt" firstAttribute="top" secondItem="lYK-8B-F2E" secondAttribute="top" constant="12" id="8QL-Ze-bNi"/>
+                                                <constraint firstAttribute="bottom" secondItem="uRp-F8-AAt" secondAttribute="bottom" constant="12" id="8Z9-Fd-oXx"/>
+                                                <constraint firstItem="VWw-Xf-MJu" firstAttribute="top" secondItem="EIM-dX-ROy" secondAttribute="bottom" constant="8" id="9gP-Wq-8Gm"/>
+                                                <constraint firstItem="EIM-dX-ROy" firstAttribute="top" secondItem="lYK-8B-F2E" secondAttribute="topMargin" constant="12" id="ASV-sL-jBq"/>
+                                                <constraint firstItem="VWw-Xf-MJu" firstAttribute="leading" secondItem="uRp-F8-AAt" secondAttribute="trailing" constant="12" id="d0S-59-qHw"/>
+                                                <constraint firstItem="uRp-F8-AAt" firstAttribute="leading" secondItem="lYK-8B-F2E" secondAttribute="leading" constant="11" id="gE9-wS-Lbm"/>
+                                                <constraint firstItem="VWw-Xf-MJu" firstAttribute="trailing" secondItem="lYK-8B-F2E" secondAttribute="trailingMargin" id="pYQ-O7-hbN"/>
+                                                <constraint firstItem="VWw-Xf-MJu" firstAttribute="bottom" secondItem="lYK-8B-F2E" secondAttribute="bottomMargin" id="sJL-at-QxY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="uRp-F8-AAt" id="UDw-2l-rHn"/>
+                                            <outlet property="cellTags" destination="VWw-Xf-MJu" id="ovL-dD-f3f"/>
+                                            <outlet property="dateLabel" destination="EIM-dX-ROy" id="6AH-V9-Swa"/>
+                                            <segue destination="vgg-32-U3d" kind="show" identifier="showDetail" id="b5P-jm-pbe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kxl-gs-z2g"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-IA-YYx">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Iag-S2-5S6"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Map" image="map" id="b2m-TX-mvt">
+                                        <connections>
+                                            <action selector="mapPressed:" destination="BYZ-38-t0r" id="0FT-Cc-jS0"/>
+                                            <segue destination="gmd-7V-JhQ" kind="show" identifier="showMapSegue" id="b6B-cx-H37"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lSr-IA-YYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2hl-T9-WiE"/>
+                            <constraint firstItem="IeT-lI-vzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ykd-PP-y18"/>
+                            <constraint firstItem="lSr-IA-YYx" firstAttribute="top" secondItem="IeT-lI-vzP" secondAttribute="bottom" id="d0E-xY-w9i"/>
+                            <constraint firstItem="lSr-IA-YYx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hwH-y4-eCR"/>
+                            <constraint firstItem="lSr-IA-YYx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v26-7F-SGj"/>
+                            <constraint firstItem="IeT-lI-vzP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x8Z-3n-8Zg"/>
+                            <constraint firstItem="IeT-lI-vzP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xIB-sl-beo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Photos" id="awe-Kw-XGD">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="settingsIcon" id="o7R-Yq-zLt">
+                            <connections>
+                                <action selector="settingsPressed:" destination="BYZ-38-t0r" id="EvL-PM-du1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MDD-Iu-ZZg">
+                            <connections>
+                                <segue destination="eb3-WJ-RPg" kind="show" identifier="showAddPhoto" id="onH-oX-br3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="IqC-cb-Q1R" id="uSa-E3-exh"/>
+                        <outlet property="tableView" destination="IeT-lI-vzP" id="jdz-or-sp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="IqC-cb-Q1R">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="9GJ-cq-h4M"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="0j7-LJ-AdQ"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="2FU-zr-b0n"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="qhS-bU-Gcq"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="672.79999999999995" y="-228.32512315270938"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="fUx-Vu-1bC">
+            <objects>
+                <viewController id="vgg-32-U3d" customClass="DetailViewController" customModule="Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kxn-eY-yID">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Insert caption here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CHQ-y4-k7L">
+                                <rect key="frame" x="16" y="451" width="343" height="150"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#Tags #Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azY-fT-G1D">
+                                <rect key="frame" x="16" y="631" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f71-Wu-sNb">
+                                <rect key="frame" x="16" y="394" width="343" height="27"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-bS-QSq">
+                                <rect key="frame" x="42" y="157" width="291" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="yg5-KG-dCf"/>
+                                    <constraint firstAttribute="height" constant="215" id="zys-ak-l9I"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t1Z-bS-QSq" firstAttribute="leading" secondItem="cbB-Zz-Hao" secondAttribute="leading" constant="42" id="3h1-WQ-CRJ"/>
+                            <constraint firstItem="CHQ-y4-k7L" firstAttribute="top" secondItem="f71-Wu-sNb" secondAttribute="bottom" constant="30" id="7Mg-kr-efS"/>
+                            <constraint firstItem="azY-fT-G1D" firstAttribute="top" secondItem="CHQ-y4-k7L" secondAttribute="bottom" constant="30" id="DoU-HA-l96"/>
+                            <constraint firstItem="cbB-Zz-Hao" firstAttribute="trailing" secondItem="CHQ-y4-k7L" secondAttribute="trailing" constant="16" id="UfE-sw-qWx"/>
+                            <constraint firstItem="cbB-Zz-Hao" firstAttribute="trailing" secondItem="t1Z-bS-QSq" secondAttribute="trailing" constant="42" id="d3A-Kb-gHO"/>
+                            <constraint firstItem="f71-Wu-sNb" firstAttribute="top" secondItem="t1Z-bS-QSq" secondAttribute="bottom" constant="22" id="dLW-4w-f4K"/>
+                            <constraint firstItem="CHQ-y4-k7L" firstAttribute="leading" secondItem="cbB-Zz-Hao" secondAttribute="leading" constant="16" id="diz-aS-emd"/>
+                            <constraint firstItem="cbB-Zz-Hao" firstAttribute="trailing" secondItem="f71-Wu-sNb" secondAttribute="trailing" constant="16" id="f9S-D4-Oas"/>
+                            <constraint firstItem="f71-Wu-sNb" firstAttribute="leading" secondItem="cbB-Zz-Hao" secondAttribute="leading" constant="16" id="kWT-0l-ufp"/>
+                            <constraint firstItem="t1Z-bS-QSq" firstAttribute="top" secondItem="cbB-Zz-Hao" secondAttribute="top" constant="17" id="rTq-Bm-ax9"/>
+                            <constraint firstItem="cbB-Zz-Hao" firstAttribute="trailing" secondItem="azY-fT-G1D" secondAttribute="trailing" constant="16" id="rfR-gD-M0k"/>
+                            <constraint firstItem="cbB-Zz-Hao" firstAttribute="bottom" secondItem="azY-fT-G1D" secondAttribute="bottom" constant="68" id="vn7-Bk-qcA"/>
+                            <constraint firstItem="azY-fT-G1D" firstAttribute="leading" secondItem="cbB-Zz-Hao" secondAttribute="leading" constant="16" id="zar-Vi-bxW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cbB-Zz-Hao"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rhQ-Od-gqA">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Save" id="416-PO-G0E">
+                                <connections>
+                                    <action selector="savePressed:" destination="vgg-32-U3d" id="kMJ-w1-shu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="xOC-sw-lJ8">
+                                <connections>
+                                    <action selector="deletePressed:" destination="vgg-32-U3d" id="JEh-JZ-K0d"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="f71-Wu-sNb" id="hge-u9-rlC"/>
+                        <outlet property="imageView" destination="t1Z-bS-QSq" id="QCO-6i-XSI"/>
+                        <outlet property="tagField" destination="azY-fT-G1D" id="god-mc-drl"/>
+                        <outlet property="textField" destination="CHQ-y4-k7L" id="9HO-HV-jxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9f-uj-GiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416.8" y="-228.32512315270938"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="vp5-12-7dd">
+            <objects>
+                <viewController id="gmd-7V-JhQ" customClass="MapViewController" customModule="Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uvu-JB-dlg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OWI-Na-Akx">
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gmd-7V-JhQ" id="yld-bs-Uhe"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OWI-Na-Akx" firstAttribute="leading" secondItem="0zh-eL-eRB" secondAttribute="leading" id="2h6-ng-w6y"/>
+                            <constraint firstItem="OWI-Na-Akx" firstAttribute="top" secondItem="0zh-eL-eRB" secondAttribute="top" id="5kY-R0-GhX"/>
+                            <constraint firstItem="OWI-Na-Akx" firstAttribute="trailing" secondItem="0zh-eL-eRB" secondAttribute="trailing" id="rxB-h4-P1e"/>
+                            <constraint firstItem="OWI-Na-Akx" firstAttribute="bottom" secondItem="0zh-eL-eRB" secondAttribute="bottom" id="wuc-D5-VES"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0zh-eL-eRB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rgu-qP-G01">
+                        <barButtonItem key="leftBarButtonItem" image="barButtonItem:Bla-nI-AAs:image" id="Bla-nI-AAs">
+                            <connections>
+                                <action selector="settingsPressed:" destination="gmd-7V-JhQ" id="bBZ-h7-WSS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="DmA-TD-W9Z">
+                            <connections>
+                                <action selector="donePressed:" destination="gmd-7V-JhQ" id="Ub7-Lz-9CR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="OWI-Na-Akx" id="nwl-hx-f0q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cz-fe-Usq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="539"/>
+        </scene>
+        <!--Add Photo View Controller-->
+        <scene sceneID="c9F-sM-5BF">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoViewController" id="eb3-WJ-RPg" customClass="AddPhotoViewController" customModule="Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbd-Eq-P8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-Cz-ZPH">
+                                <rect key="frame" x="0.0" y="140" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KSj-9X-UGb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="tUD-3q-PlQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="H8g-hc-1cV">
+                                            <connections>
+                                                <action selector="trashPressed:" destination="eb3-WJ-RPg" id="Y8s-If-Njo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R09-RI-dtw">
+                                            <connections>
+                                                <action selector="savePressed:" destination="eb3-WJ-RPg" id="AWb-ff-IS5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Insert caption here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mi1-2M-TFd">
+                                <rect key="frame" x="16" y="498" width="343" height="152"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Bep-fO-Evv">
+                                <rect key="frame" x="42" y="209" width="291" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="215" id="1S5-vl-dBl"/>
+                                    <constraint firstAttribute="width" constant="291" id="kjO-uc-KXp"/>
+                                    <constraint firstAttribute="height" constant="215" id="mPi-46-iRh"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#Tags #Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-fV-ZX1">
+                                <rect key="frame" x="16" y="680" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybB-UZ-CT9">
+                                <rect key="frame" x="134.66666666666666" y="438" width="106" height="30"/>
+                                <state key="normal" title="Upload a Photo"/>
+                                <connections>
+                                    <action selector="choosePhotoPressed:" destination="eb3-WJ-RPg" eventType="touchUpInside" id="Et0-cG-tz6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZu-lp-3VO">
+                                <rect key="frame" x="9" y="193" width="357" height="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GHg-fV-ZX1" firstAttribute="top" secondItem="Mi1-2M-TFd" secondAttribute="bottom" constant="30" id="Gc7-sT-Ls1"/>
+                            <constraint firstItem="Bep-fO-Evv" firstAttribute="leading" secondItem="Gsd-YP-m4h" secondAttribute="leading" constant="42" id="SCT-KV-smF"/>
+                            <constraint firstItem="Gsd-YP-m4h" firstAttribute="trailing" secondItem="GHg-fV-ZX1" secondAttribute="trailing" constant="16" id="TNU-8u-kNl"/>
+                            <constraint firstItem="Gsd-YP-m4h" firstAttribute="bottom" secondItem="GHg-fV-ZX1" secondAttribute="bottom" constant="68" id="Toz-9b-mPI"/>
+                            <constraint firstItem="ybB-UZ-CT9" firstAttribute="centerX" secondItem="Gsd-YP-m4h" secondAttribute="centerX" id="UVW-cv-0xZ"/>
+                            <constraint firstItem="GHg-fV-ZX1" firstAttribute="leading" secondItem="Gsd-YP-m4h" secondAttribute="leading" constant="16" id="by6-nR-bms"/>
+                            <constraint firstItem="A9a-Cz-ZPH" firstAttribute="top" secondItem="Gsd-YP-m4h" secondAttribute="top" id="cg7-F3-xqj"/>
+                            <constraint firstItem="A9a-Cz-ZPH" firstAttribute="trailing" secondItem="Gsd-YP-m4h" secondAttribute="trailing" id="d31-Xc-zS3"/>
+                            <constraint firstItem="iZu-lp-3VO" firstAttribute="leading" secondItem="Gsd-YP-m4h" secondAttribute="leading" constant="9" id="kzT-hR-bNU"/>
+                            <constraint firstItem="Gsd-YP-m4h" firstAttribute="trailing" secondItem="Mi1-2M-TFd" secondAttribute="trailing" constant="16" id="mst-gf-PBG"/>
+                            <constraint firstItem="Mi1-2M-TFd" firstAttribute="top" secondItem="ybB-UZ-CT9" secondAttribute="bottom" constant="30" id="nj7-0J-GDs"/>
+                            <constraint firstItem="ybB-UZ-CT9" firstAttribute="top" secondItem="Bep-fO-Evv" secondAttribute="bottom" constant="14" id="ntS-tm-ibK"/>
+                            <constraint firstItem="Mi1-2M-TFd" firstAttribute="leading" secondItem="Gsd-YP-m4h" secondAttribute="leading" constant="16" id="odi-5u-my2"/>
+                            <constraint firstItem="Bep-fO-Evv" firstAttribute="top" secondItem="A9a-Cz-ZPH" secondAttribute="bottom" constant="25" id="ots-Lu-GSL"/>
+                            <constraint firstItem="A9a-Cz-ZPH" firstAttribute="leading" secondItem="Gsd-YP-m4h" secondAttribute="leading" id="t2u-QM-qlB"/>
+                            <constraint firstItem="Gsd-YP-m4h" firstAttribute="trailing" secondItem="Bep-fO-Evv" secondAttribute="trailing" constant="42" id="vlv-7o-6Pw"/>
+                            <constraint firstItem="Gsd-YP-m4h" firstAttribute="trailing" secondItem="iZu-lp-3VO" secondAttribute="trailing" constant="9" id="yf0-B0-bKx"/>
+                            <constraint firstItem="iZu-lp-3VO" firstAttribute="top" secondItem="A9a-Cz-ZPH" secondAttribute="bottom" constant="9" id="zWf-Wu-52Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gsd-YP-m4h"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionTextField" destination="Mi1-2M-TFd" id="D0O-nv-Gsu"/>
+                        <outlet property="imageView" destination="Bep-fO-Evv" id="jvF-fV-c9v"/>
+                        <outlet property="saveButtonOutlet" destination="R09-RI-dtw" id="onY-ni-diB"/>
+                        <outlet property="tagsTextField" destination="GHg-fV-ZX1" id="ual-24-bgL"/>
+                        <outlet property="trashButtonOutlet" destination="H8g-hc-1cV" id="bc6-UA-oa0"/>
+                        <outlet property="weatherLabel" destination="iZu-lp-3VO" id="Dr6-BT-Vqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nb1-qK-yS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672.79999999999995" y="-963.54679802955673"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="H7b-hk-rc0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WYu-m6-6k9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Photos" image="camera" selectedImage="camera" id="2ed-bN-SHP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KTV-mT-RKC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g3T-9A-gMs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOP-mX-oc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-228"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barButtonItem:Bla-nI-AAs:image" width="30" height="30">
+            <mutableData key="keyedArchiveRepresentation">
+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
+AAAAAAAAAAAAAAAAAAAkAAAA8wAAAP8AAAD/AAAALAAAAAAAAAAAAAAAAAAAAAAAAAAXAAAA8QAAAP8A
+AADdAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALwAAAP8AAAD/AAAA8gAAACMAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAL8AAAD/AAAA/wAAAP8AAAD/AAAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAC9AAAAAAAAAAAA
+AAAAAAAAAAAAAMMAAAD/AAAA/wAAAP8AAAD/AAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3QAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADBAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAApAAAA8wAAAP8AAAD/AAAALAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAA8QAAAP8A
+AADdAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALQAAAP8AAAD/AAAA8wAAACkAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAwgAAAP8AAAD/AAAAcAAAAAAAAAAAAAAAAAAAAAAAAACcAAAA/wAAALkA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbwAAAP8AAAD/AAAAwgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABIAAAA8gAAAP8AAAD/AAAA0QAAAAIAAAAAAAAAAAAAADIAAAD9AAAA+gAAACoA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA1QAAAP8AAAD/AAAA8gAAAEgAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAoAAAD7AAAA/wAAAP8AAAD/AAAA/wAAAHIAAAAAAAAAAQAAAMIAAAD/AAAAjwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsAAAA/wAAAP8AAAD/AAAA/wAAAPsAAAAKAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABoAAAAcwAAALYAAAD/AAAA/wAAAPgAAABMAAAAVgAAAP8AAADqAAAAEAAAAAAA
+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
+NwAACrlYWVogAAAAAAAAKDgAABELAADIuXBhcmEAAAAAAAMAAAACZmYAAPKnAAANWQAAE9AAAApbc2Yz
+MgAAAAAAAQxCAAAF3v//8yYAAAeTAAD9kP//+6L///2jAAAD3AAAwG7SJSYnKFokY2xhc3NuYW1lWCRj
+bGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpaTlNJbWFnZVJlcFhOU09iamVjdNIlJiwtV05TQXJy
+YXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrVMjM0NQo2Nzg5OldOU1doaXRlXE5TQ29tcG9uZW50
+c1xOU0NvbG9yU3BhY2VfEBJOU0N1c3RvbUNvbG9yU3BhY2VEMCAwAEMwIDAQA4AMgBDUPD0+Cj9AQUJU
+TlNJRFVOU0lDQ1dOU01vZGVsEAmADRAAgA/SRApFRldOUy5kYXRhTxERaAAAEWhhcHBsAgAAAG1udHJH
+UkFZWFlaIAfcAAgAFwAPAC4AD2Fjc3BBUFBMAAAAAG5vbmUAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAA
+ANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWRlc2MA
+AADAAAAAeWRzY20AAAE8AAAH6GNwcnQAAAkkAAAAI3d0cHQAAAlIAAAAFGtUUkMAAAlcAAAIDGRlc2MA
+AAAAAAAAH0dlbmVyaWMgR3JheSBHYW1tYSAyLjIgUHJvZmlsZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt
+bHVjAAAAAAAAAB8AAAAMc2tTSwAAAC4AAAGEZGFESwAAADgAAAGyY2FFUwAAADgAAAHqdmlWTgAAAEAA
+AAIicHRCUgAAAEoAAAJidWtVQQAAACwAAAKsZnJGVQAAAD4AAALYaHVIVQAAADQAAAMWemhUVwAAAB4A
+AANKbmJOTwAAADoAAANoY3NDWgAAACgAAAOiaGVJTAAAACQAAAPKaXRJVAAAAE4AAAPucm9STwAAACoA
+AAQ8ZGVERQAAAE4AAARma29LUgAAACIAAAS0c3ZTRQAAADgAAAGyemhDTgAAAB4AAATWamFKUAAAACYA
+AAT0ZWxHUgAAACoAAAUacHRQTwAAAFIAAAVEbmxOTAAAAEAAAAWWZXNFUwAAAEwAAAXWdGhUSAAAADIA
+AAYidHJUUgAAACQAAAZUZmlGSQAAAEYAAAZ4aHJIUgAAAD4AAAa+cGxQTAAAAEoAAAb8cnVSVQAAADoA
+AAdGZW5VUwAAADwAAAeAYXJFRwAAACwAAAe8AFYBYQBlAG8AYgBlAGMAbgDhACAAcwBpAHYA4QAgAGcA
+YQBtAGEAIAAyACwAMgBHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgADIALAAyACAAZwBhAG0AbQBhAHAA
+cgBvAGYAaQBsAEcAYQBtAG0AYQAgAGQAZQAgAGcAcgBpAHMAbwBzACAAZwBlAG4A6AByAGkAYwBhACAA
+MgAuADIAQx6lAHUAIABoAOwAbgBoACAATQDgAHUAIAB4AOEAbQAgAEMAaAB1AG4AZwAgAEcAYQBtAG0A
+YQAgADIALgAyAFAAZQByAGYAaQBsACAARwBlAG4A6QByAGkAYwBvACAAZABhACAARwBhAG0AYQAgAGQA
+ZQAgAEMAaQBuAHoAYQBzACAAMgAsADIEFwQwBDMEMAQ7BEwEPQQwACAARwByAGEAeQAtBDMEMAQ8BDAA
+IAAyAC4AMgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAZwByAGkAcwAgAGcAYQBtAG0A
+YQAgADIALAAyAMEAbAB0AGEAbADhAG4AbwBzACAAcwB6APwAcgBrAGUAIABnAGEAbQBtAGEAIAAyAC4A
+MpAadShwcJaOUUlepgAgADIALgAyACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgAGcA
+YQBtAG0AYQAgADIALAAyAC0AcAByAG8AZgBpAGwATwBiAGUAYwBuAOEAIAFhAGUAZADhACAAZwBhAG0A
+YQAgADIALgAyBdIF0AXeBdQAIAXQBeQF1QXoACAF2wXcBdwF2QAgADIALgAyAFAAcgBvAGYAaQBsAG8A
+IABnAHIAaQBnAGkAbwAgAGcAZQBuAGUAcgBpAGMAbwAgAGQAZQBsAGwAYQAgAGcAYQBtAG0AYQAgADIA
+LAAyAEcAYQBtAGEAIABnAHIAaQAgAGcAZQBuAGUAcgBpAGMBAwAgADIALAAyAEEAbABsAGcAZQBtAGUA
+aQBuAGUAcwAgAEcAcgBhAHUAcwB0AHUAZgBlAG4ALQBQAHIAbwBmAGkAbAAgAEcAYQBtAG0AYQAgADIA
+LAAyx3y8GAAg1ozAyQAgrBC5yAAgADIALgAyACDVBLhc0wzHfGZukBpwcF6mfPtlcAAgADIALgAyACBj
+z4/wZYdO9k4AgiwwsDDsMKQwrDDzMN4AIAAyAC4AMgAgMNcw7TDVMKEwpDDrA5MDtQO9A7kDugPMACAD
+kwO6A8EDuQAgA5MDrAO8A7wDsQAgADIALgAyAFAAZQByAGYAaQBsACAAZwBlAG4A6QByAGkAYwBvACAA
+ZABlACAAYwBpAG4AegBlAG4AdABvAHMAIABkAGEAIABHAGEAbQBtAGEAIAAyACwAMgBBAGwAZwBlAG0A
+ZQBlAG4AIABnAHIAaQBqAHMAIABnAGEAbQBtAGEAIAAyACwAMgAtAHAAcgBvAGYAaQBlAGwAUABlAHIA
+ZgBpAGwAIABnAGUAbgDpAHIAaQBjAG8AIABkAGUAIABnAGEAbQBtAGEAIABkAGUAIABnAHIAaQBzAGUA
+cwAgADIALAAyDiMOMQ4HDioONQ5BDgEOIQ4hDjIOQA4BDiMOIg5MDhcOMQ5IDicORA4bACAAMgAuADIA
+RwBlAG4AZQBsACAARwByAGkAIABHAGEAbQBhACAAMgAsADIAWQBsAGUAaQBuAGUAbgAgAGgAYQByAG0A
+YQBhAG4AIABnAGEAbQBtAGEAIAAyACwAMgAgAC0AcAByAG8AZgBpAGkAbABpAEcAZQBuAGUAcgBpAQ0A
+awBpACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIALgAyACAAcAByAG8AZgBpAGwAVQBuAGkAdwBlAHIA
+cwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABzAHoAYQByAG8BWwBjAGkAIABnAGEAbQBtAGEAIAAyACwA
+MgQeBDEESQQwBE8AIARBBDUEQAQwBE8AIAQzBDAEPAQ8BDAAIAAyACwAMgAtBD8EQAQ+BEQEOAQ7BEwA
+RwBlAG4AZQByAGkAYwAgAEcAcgBhAHkAIABHAGEAbQBtAGEAIAAyAC4AMgAgAFAAcgBvAGYAaQBsAGUG
+OgYnBkUGJwAgADIALgAyACAGRAZIBkYAIAYxBkUGJwYvBkoAIAY5BicGRXRleHQAAAAAQ29weXJpZ2h0
+IEFwcGxlIEluYy4sIDIwMTIAAFhZWiAAAAAAAADzUQABAAAAARbMY3VydgAAAAAAAAQAAAAABQAKAA8A
+FAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQA
+qQCuALIAtwC8AMEAxgDLANAA1QDbAOAA5QDrAPAA9gD7AQEBBwENARMBGQEfASUBKwEyATgBPgFFAUwB
+UgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJAdEB2QHhAekB8gH6AgMCDAIUAh0CJgIvAjgC
+QQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLBAssC1QLgAusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3ID
+fgOKA5YDogOuA7oDxwPTA+AD7AP5BAYEEwQgBC0EOwRIBFUEYwRxBH4EjASaBKgEtgTEBNME4QTwBP4F
+DQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYGBhYGJwY3BkgGWQZqBnsGjAadBq8GwAbRBuMG
+9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gflB/gICwgfCDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJ
+OglPCWQJeQmPCaQJugnPCeUJ+woRCicKPQpUCmoKgQqYCq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuwC8gL
+4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10DY4NqQ3DDd4N+A4TDi4OSQ5kDn8Omw62DtIO
+7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBhEH4QmxC5ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUS
+ZBKEEqMSwxLjEwMTIxNDE2MTgxOkE8UT5RQGFCcUSRRqFIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYDFiYW
+SRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiKGK8Y1Rj6GSAZRRlrGZEZtxndGgQaKhpRGnca
+nhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyjHMwc9R0eHUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4f
+aR+UH78f6iAVIEEgbCCYIMQg8CEcIUghdSGhIc4h+yInIlUigiKvIt0jCiM4I2YjlCPCI/AkHyRNJHwk
+qyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneierJ9woDSg/KHEooijUKQYpOClrKZ0p0CoCKjUq
+aCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0MLUEtdi2rLeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGww
+pDDbMRIxSjGCMbox8jIqMmMymzLUMw0zRjN/M7gz8TQrNGU0njTYNRM1TTWHNcI1/TY3NnI2rjbpNyQ3
+YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zstO2s7qjvoPCc8ZTykPOM9Ij1hPaE94D4gPmA+
+oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHuQjBCckK1QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJG
+Z0arRvBHNUd7R8BIBUhLSJFI10kdSWNJqUnwSjdKfUrESwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4lTm5O
+t08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1NfU6pT9lRCVI9U21UoVXVVwlYPVlxWqVb3V0RX
+klfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuVW+VcNVyGXNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg
+/GFPYaJh9WJJYpxi8GNDY5dj62RAZJRk6WU9ZZJl52Y9ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpIap9q
+92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CGcOBxOnGVcfByS3KmcwFzXXO4dBR0cHTMdSh1
+hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pGeqV7BHtje8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeA
+qIEKgWuBzYIwgpKC9INXg7qEHYSAhOOFR4Wrhg6GcobXhzuHn4gEiGmIzokziZmJ/opkisqLMIuWi/yM
+Y4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLjk02TtpQglIqU9JVflcmWNJaflwqXdZfgmEyY
+uJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5Anq6fHZ+Ln/qgaaDYoUehtqImopajBqN2o+akVqTHpTil
+qaYapoum/adup+CoUqjEqTepqaocqo+rAqt1q+msXKzQrUStuK4trqGvFq+LsACwdbDqsWCx1rJLssKz
+OLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1uy67p7whvJu9Fb2Pvgq+hL7/v3q/9cBwwOzB
+Z8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/yD3IvMk6ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQ
+OdC60TzRvtI/0sHTRNPG1EnUy9VO1dHWVdbY11zX4Nhk2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i3ynf
+r+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy6LzpRunQ6lvq5etw6/vshu0R7ZzuKO6070Dv
+zPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb794r4Gfio+Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t//+A
+DtIlJkhJXU5TTXV0YWJsZURhdGGjSEoqVk5TRGF0YdIlJkxNXE5TQ29sb3JTcGFjZaJOKlxOU0NvbG9y
+U3BhY2XSJSZQUVdOU0NvbG9yolAq0iUmU1RXTlNJbWFnZaJTKl8QD05TS2V5ZWRBcmNoaXZlctFXWFRy
+b290gAEACAARABoAIwAtADIANwBMAFIAXQBkAGsAeAB/AIcAiQCLAJAAkgCUAJ0AogCtAK8AsQCzALgA
+uwC9AL8AwQDDAMgA3wDhAOMR+RH+EgkSEhIlEikSNBI9EkISShJNElISYRJlEnASeBKFEpISpxKsErAS
+shK0ErYSvxLEEsoS0hLUEtYS2BLaEt8S5yRTJFUkWiRoJGwkcyR4JIUkiCSVJJokoiSlJKoksiS1JMck
+yiTPAAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAJNE
+</mutableData>
+        </image>
+        <image name="camera" width="26" height="26"/>
+        <image name="default" width="1280" height="800"/>
+        <image name="map" width="26" height="26"/>
+        <image name="settingsIcon" width="30" height="30"/>
+        <image name="sync" width="100" height="100"/>
+    </resources>
+</document>

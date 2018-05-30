@@ -1,0 +1,83 @@
+
+Assignment 3 Grade
+
+Home 5/5
+
+1/1 table or collection view displays journal entries
+1/1 cells contain thumbnail image, text blurb, and date
+1/1 sectioned by month
+1/1 search bar integrated into nav controller filters entries
+1/1 bar buttons direct user to settings, entry, or map
+
+Map 3/3
+
+1/1 displays location of journal entries
+1/1 clusters entries
+1/1 tapping on a location queries and displays nearby entries
+
+Settings 2/2
+
+1/1 settings page displays name on iCloud account
+1/1 tapping sync button deletes local data and triggers an iCloud download 
+0/1 (BONUS POINT) touchID or password required upon opening app
+0/1 (BONUS POINT) daily "on this day" notification that directs users to dated entries
+
+Journal Entry 4/4
+
+1/1 photo stored with location and date created
+1/1 date queries and displays weather via Dark Sky weather api
+1/1 uses vision framework to create and display tags on objects detected in photos
+1/1 allows photo, date, text, and tag editing
+
+Data and Syncing 4/4
+
+1/1 codable custom class or struct stores journal entries to disk as JSON
+1/1 local data persistence
+1/1 iCloud syncing
+1/1 uses CloudKit subscriptions to sync across devices
+
+Extensions 1/2
+
+0/1 photo share extension allows user to add a journal entry from the photos app
+1/1 today widget extension shows 5 latest journal entries, including photos
+
+Code Quality 9/10
+
+Best Practice = MVC architecture patterns, "Swiftiness", general code quality
+Well-Formatted = tasteful whitespace and newlines, no semicolons
+Clearly Written = easy to read/follow, meaningful variable/method names, marked sections
+Concise = computing efficiency, no duplicate code
+
+2/3 Best Practice
+2/2 Well-Formatted
+3/3 Clearly Written
+2/2 Concise
+
+
+Comments:
+
+Your Swift is well-written, and your project is very polished. Nice work, keep up the
+solid code quality.
+
+Most of your marking is in place, but make sure you don't forget about that. A few places
+where it's missing.
+
+Haley Williams is a boss. I just listened to 3 of Paramore's albums yesterday.
+
+You've got a few bugs. When the user taps "save" on a journal entry, and not all the
+fields exist, you show an error. Cool, that's good. However, once I dismiss that error,
+I'm stuck on that page until I kill the app. The save button is still disabled, and the
+spinner is still doing its thing.
+
+Not being able to fetch an image asset is not handled in the best way. The user should be
+able to select any image they want. If metadata is not available, set default values for
+those fields. Currently, I'm just stuck on the image picker for no apparent reason. The
+only way I knew what was going on is because of your logs (good work with that, this is
+exactly what logging is for).
+
+The best practice point covers all of the above issues.
+
+Excellent UI design!
+
+
+Total: 28/30

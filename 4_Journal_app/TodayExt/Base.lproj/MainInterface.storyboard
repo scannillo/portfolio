@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="TodayExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rCi-eq-dl9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                <color key="backgroundColor" red="0.52637773752212524" green="0.38175106048583984" blue="0.77591830492019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BBq-e3-YLo">
+                                    <size key="itemSize" width="84" height="93"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="QGl-km-6N5" customClass="PhotoCollectionViewCell" customModule="TodayExt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.5" width="84" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="84" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GSZ-TQ-R6A">
+                                                    <rect key="frame" x="9" y="9" width="66" height="75"/>
+                                                    <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="GSZ-TQ-R6A" firstAttribute="top" secondItem="QGl-km-6N5" secondAttribute="top" constant="9" id="6OO-zz-eJS"/>
+                                            <constraint firstAttribute="bottom" secondItem="GSZ-TQ-R6A" secondAttribute="bottom" constant="9" id="N2u-mO-C2X"/>
+                                            <constraint firstItem="GSZ-TQ-R6A" firstAttribute="leading" secondItem="QGl-km-6N5" secondAttribute="leading" constant="9" id="PLB-ub-Gbh"/>
+                                            <constraint firstAttribute="trailing" secondItem="GSZ-TQ-R6A" secondAttribute="trailing" constant="9" id="VkY-78-pYx"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="GSZ-TQ-R6A" id="fNe-gr-8gg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="iRS-FP-HLD"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="ERd-SN-LTw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rCi-eq-dl9" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="IM1-Lr-Fih"/>
+                            <constraint firstItem="rCi-eq-dl9" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="o73-Yr-1Vk"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="rCi-eq-dl9" secondAttribute="bottom" id="rUM-7o-bOm"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="rCi-eq-dl9" secondAttribute="trailing" id="wjj-Na-u9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="120"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rCi-eq-dl9" id="iaV-Zp-NJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.19999999999999" y="126.83658170914543"/>
+        </scene>
+    </scenes>
+</document>
