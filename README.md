@@ -33,6 +33,18 @@
 - Description: Designed a gesture-driven Tic-Tac-Toe game for 2 players. Application limited to iPhone 8 portrait mode.
 - **Tools used**: UIGestureRecognizers, AudioToolbox, Storyboard and Programatic design
 
+1. **Journal App** 
+<p align="center">
+<img src="/images/orange_logo.png?raw=true" height="75px" width="75px" >
+</p>
+
+- Date: 5/20/2018
+- What: Journal app that syncs photo entires & metadata across devices using CloudKit.
+- Description: This app uses CloudKit to sync data between devices, but also persists data to a local JSON file to enhance performance and usability. The app utilizes photos as the foundation for all journal entries, but also logs metadata associated with each photo, such as date, location, and weather. In addition, Apple's Vision Framework is used to generate tags based on the image uploaded. The user can edit these automatically-generated tags if they so desire. The user is able to query their collection of photos through a text search or through a search from a map view based on image locations as pins on a map. The app also utilizes the Dark Sky Weather API to show a user weather data for the day the photo was taken.
+- This app was built to fulfil specifics requirements for an assignment in graduate school.
+- **Tools used**: CloudKit, UISearchBarController, Map View, Apple's Vision Framework (image recognition), Weather API Requests, CloudKit Subscriptions, Today Widget Extension
+
+
 ## _Database Design in MySQL_
 
 1. **MySQL - Chicago Musicians Connect Database**
