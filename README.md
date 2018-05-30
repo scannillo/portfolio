@@ -9,8 +9,8 @@
 
 - Date: 3/14/2018
 - What: iOS app to create and store musician profiles based in Chicago, IL
-- Description: The first part of a potential long-term personal project. The goal of the project is to connect musicians, show bookers, and artists alike in the Chicago DIY Music scene. This phase of the app focused on the creation of and presentation of musician profiles (including a user profile image, sound description, bio, and in-app song via Soundcloud) in an iPhone compatible app.
-- **Tools used**: Firebase, Firebase/Storage, CocoaPods, Alamofire, Custom Splashscreen, custom design/graphics, Auto-layout, UINavigationControllers, UITableViewControllers, UITabBarControllers, Network activity indication, Network connection indication, Network post/fetch procedures
+- Description: The D.I.CHI app is built for the DIY Musician based in Chicago, IL. This app provides a one-stop-shop for listening to and communicating with the ever-growing plethora of talented musicians in the windy city. With the ability to showcase a song from Soundcloud, to create a succinct musician profile,  and to chat in real time, musicians and fans alike are able to stay up to date on the endless stylings of Chicago’s most talented locals. 
+- **Tools used**: Firebase, Firebase/Storage, Facebook SDK, CocoaPods, Alamofire, Custom Splashscreen, custom design/graphics, Auto-layout, SideMenu (Hamburger), UINavigationControllers, UITableViewControllers, UITabBarControllers, Network activity indication, Network connection indication, Network post/fetch procedures
 
 - <img src="/images/simulator_front.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_table.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_profile.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_edit.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_message.png?raw=true" height="245px" width="138px" >
 
