@@ -45,7 +45,7 @@
 - This app was built to fulfil specifics requirements for an assignment in graduate school.
 - **Tools used**: CloudKit, UISearchBarController, Map View, Apple's Vision Framework (image recognition), Weather API Requests, CloudKit Subscriptions, Today Widget Extension
 
-- <img src="/images/simulator_front.png?raw=true" height="245px" width="138px" > <img src="/images/journale_table.png?raw=true" height="245px" width="138px" > <img src="/images/journale_map.png?raw=true" height="245px" width="138px" > <img src="/images/journale_edit.png?raw=true" height="245px" width="138px" > <img src="/images/journale_sync.png?raw=true" height="245px" width="138px" >
+- <img src="/images/journal_table.png?raw=true" height="245px" width="138px" > <img src="/images/journal_map.png?raw=true" height="245px" width="138px" > <img src="/images/journal_edit.png?raw=true" height="245px" width="138px" > <img src="/images/journal_sync.png?raw=true" height="245px" width="138px" >
 
 
 ## _Database Design in MySQL_
