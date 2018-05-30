@@ -2,6 +2,7 @@
 
 ## _iOS Apps in Swift4_
 
+
 1. **ChiMusiciansConnect: D.I.Chi App** 
 <p align="center">
 <img src="/images/orange_logo.png?raw=true" height="75px" width="75px" >
@@ -13,6 +14,7 @@
 - **Tools used**: Firebase, Firebase/Storage, Facebook SDK, CocoaPods, Alamofire, Custom Splashscreen, custom design/graphics, Auto-layout, SideMenu (Hamburger), UINavigationControllers, UITableViewControllers, UITabBarControllers, Network activity indication, Network connection indication, Network post/fetch procedures
 
 - <img src="/images/simulator_front.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_table.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_profile.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_edit.png?raw=true" height="245px" width="138px" > <img src="/images/simulator_message.png?raw=true" height="245px" width="138px" >
+
 
 2. **Children's Book: Halloween Theme**
 
@@ -26,6 +28,7 @@
 - **Tools used**: PageViewControllers, External .nib files, UIGestureRecognizers, AVSpeechSynthesizer, custom ErrorTypes, AVAudioPlayer, UIViewPropertyAnimator, NSUserDefaults, Objective-C and Swift integration
 - <img src="/images/homeScreenBook.png?raw=true" height="192px" width="256px" > <img src="/images/pageBBook.png?raw=true" height="192px" width="256px" > <img src="/images/pageABook.png?raw=true" height="192px" width="256px" > <img src="/images/parentalGate.png?raw=true" height="192px" width="256px" >
 
+
 3. **Fun And Games: Tic-Tac-Toe App**
 
 - Date: 2/11/2018
@@ -33,7 +36,8 @@
 - Description: Designed a gesture-driven Tic-Tac-Toe game for 2 players. Application limited to iPhone 8 portrait mode.
 - **Tools used**: UIGestureRecognizers, AudioToolbox, Storyboard and Programatic design
 
-1. **Journal App** 
+
+4. **Journal App** 
 
 - Date: 5/20/2018
 - What: Journal app that syncs photo entires & metadata across devices using CloudKit.
