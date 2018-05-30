@@ -34,9 +34,6 @@
 - **Tools used**: UIGestureRecognizers, AudioToolbox, Storyboard and Programatic design
 
 1. **Journal App** 
-<p align="center">
-<img src="/images/orange_logo.png?raw=true" height="75px" width="75px" >
-</p>
 
 - Date: 5/20/2018
 - What: Journal app that syncs photo entires & metadata across devices using CloudKit.
